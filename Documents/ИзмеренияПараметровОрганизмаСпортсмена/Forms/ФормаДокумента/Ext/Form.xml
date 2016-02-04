@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Спортсмен" id="31">
+			<DataPath>Объект.Спортсмен</DataPath>
+			<ContextMenu name="СпортсменКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="СпортсменРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<Table name="Результаты" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Результаты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РезультатыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="РезультатыКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="РезультатыРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="РезультатыСтрокаПоиска" id="11">
+				<Source>
+					<lf:elementId>7</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="РезультатыСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="РезультатыСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РезультатыСостояниеПросмотра" id="14">
+				<Source>
+					<lf:elementId>7</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="РезультатыСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="РезультатыСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РезультатыУправлениеПоиском" id="17">
+				<Source>
+					<lf:elementId>7</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="РезультатыУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="РезультатыУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РезультатыНомерСтроки" id="20">
+					<DataPath>Объект.Результаты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РезультатыНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="РезультатыНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="РезультатыСпортсмен" id="23">
+					<DataPath>Объект.Результаты.Параметр</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РезультатыСпортсменКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="РезультатыСпортсменРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="РезультатыВес" id="26">
+					<DataPath>Объект.Результаты.ЗначениеПараметра</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РезультатыВесКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РезультатыВесРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ИзмеренияПараметровОрганизмаСпортсмена</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

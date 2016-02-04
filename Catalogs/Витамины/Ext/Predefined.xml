@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.0">
+	<Item id="123bc4c7-2c19-4c12-8ae8-6bf4fb4a0545">
+		<Name>АскорбиноваяКислота</Name>
+		<Code>000000005</Code>
+		<Description>Аскорбиновая кислота</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="50955801-8c5d-4ed0-87f4-d0459748b95b">
+		<Name>ВКаротин</Name>
+		<Code>000000002</Code>
+		<Description>В-каротин</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="22d40301-2278-48a7-8e64-3dd246764f3d">
+		<Name>Ретинол</Name>
+		<Code>000000001</Code>
+		<Description>Ретинол</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="18071b0b-e646-424f-b713-691b8db0c5ff">
+		<Name>Рибофлавин</Name>
+		<Code>000000004</Code>
+		<Description>Рибофлавин</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c4d0525e-e271-49cb-9757-af43bac8fe8c">
+		<Name>Тиамин</Name>
+		<Code>000000003</Code>
+		<Description>Тиамин</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ID</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ЦелеваяГруппаМышц" id="7">
+			<DataPath>Объект.ЦелеваяГруппаМышц</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЦелеваяГруппаМышцКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ЦелеваяГруппаМышцРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Pages name="Группа1" id="43">
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<Page name="ГруппаПрограмма" id="45">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Программа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа программа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПрограммаРасширеннаяПодсказка" id="46"/>
+					<ChildItems>
+						<Table name="Программа" id="16">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Программа</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПрограммаКонтекстноеМеню" id="17"/>
+							<AutoCommandBar name="ПрограммаКоманднаяПанель" id="18"/>
+							<ExtendedTooltip name="ПрограммаРасширеннаяПодсказка" id="19"/>
+							<SearchStringAddition name="ПрограммаСтрокаПоиска" id="20">
+								<Source>
+									<lf:elementId>16</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ПрограммаСтрокаПоискаКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ПрограммаСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПрограммаСостояниеПросмотра" id="23">
+								<Source>
+									<lf:elementId>16</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ПрограммаСостояниеПросмотраКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ПрограммаСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПрограммаУправлениеПоиском" id="26">
+								<Source>
+									<lf:elementId>16</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ПрограммаУправлениеПоискомКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ПрограммаУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПрограммаНомерСтроки" id="29">
+									<DataPath>Объект.Программа.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПрограммаНомерСтрокиКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ПрограммаНомерСтрокиРасширеннаяПодсказка" id="31"/>
+								</LabelField>
+								<InputField name="ПрограммаУпражнение" id="32">
+									<DataPath>Объект.Программа.Упражнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПрограммаУпражнениеКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ПрограммаУпражнениеРасширеннаяПодсказка" id="34"/>
+								</InputField>
+								<InputField name="ПрограммаКоличествоПодходов" id="35">
+									<DataPath>Объект.Программа.КоличествоПодходов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПрограммаКоличествоПодходовКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ПрограммаКоличествоПодходовРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<InputField name="ПрограммаКоличествоПовторений" id="38">
+									<DataPath>Объект.Программа.КоличествоПовторений</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПрограммаКоличествоПовторенийКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ПрограммаКоличествоПовторенийРасширеннаяПодсказка" id="40"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОписание" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа описание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<InputField name="Описание" id="13">
+							<DataPath>Объект.Описание</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="Автор" id="10">
+							<DataPath>Объект.Автор</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="АвторКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КомплексыУпражнений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

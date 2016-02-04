@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="85">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="86"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="93">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="94"/>
+			<ChildItems>
+				<InputField name="ВремяНачала" id="87">
+					<DataPath>Объект.ВремяНачала</DataPath>
+					<ContextMenu name="ВремяНачалаКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ВремяНачалаРасширеннаяПодсказка" id="89"/>
+					<Events>
+						<Event name="OnChange">ВремяНачалаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВремяОкончания" id="90">
+					<DataPath>Объект.ВремяОкончания</DataPath>
+					<ContextMenu name="ВремяОкончанияКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ВремяОкончанияРасширеннаяПодсказка" id="92"/>
+					<Events>
+						<Event name="OnChange">ВремяОкончанияПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="Продолжительность" id="95">
+					<DataPath>Объект.Продолжительность</DataPath>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=ЧЧ:мм</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="ПродолжительностьКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="ПродолжительностьРасширеннаяПодсказка" id="97"/>
+				</LabelField>
+				<InputField name="Температура" id="128">
+					<DataPath>Объект.Температура</DataPath>
+					<ContextMenu name="ТемператураКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="ТемператураРасширеннаяПодсказка" id="130"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Спортсмен" id="10">
+			<DataPath>Объект.Спортсмен</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СпортсменКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СпортсменРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<Pages name="Страницы" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="20"/>
+			<ChildItems>
+				<Page name="ГруппаРезультатыВыполненияУпражнений" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ход тренировки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРезультатыВыполненияУпражненийРасширеннаяПодсказка" id="22"/>
+					<ChildItems>
+						<Table name="РезультатыВыполненияУпражнений" id="23">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РезультатыВыполненияУпражнений</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РезультатыВыполненияУпражненийКонтекстноеМеню" id="24"/>
+							<AutoCommandBar name="РезультатыВыполненияУпражненийКоманднаяПанель" id="25"/>
+							<ExtendedTooltip name="РезультатыВыполненияУпражненийРасширеннаяПодсказка" id="26"/>
+							<SearchStringAddition name="РезультатыВыполненияУпражненийСтрокаПоиска" id="27">
+								<Source>
+									<lf:elementId>23</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="РезультатыВыполненияУпражненийСтрокаПоискаКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="РезультатыВыполненияУпражненийСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РезультатыВыполненияУпражненийСостояниеПросмотра" id="30">
+								<Source>
+									<lf:elementId>23</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="РезультатыВыполненияУпражненийСостояниеПросмотраКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="РезультатыВыполненияУпражненийСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РезультатыВыполненияУпражненийУправлениеПоиском" id="33">
+								<Source>
+									<lf:elementId>23</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="РезультатыВыполненияУпражненийУправлениеПоискомКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="РезультатыВыполненияУпражненийУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РезультатыВыполненияУпражненийНомерСтроки" id="36">
+									<DataPath>Объект.РезультатыВыполненияУпражнений.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыВыполненияУпражненийНомерСтрокиКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="РезультатыВыполненияУпражненийНомерСтрокиРасширеннаяПодсказка" id="38"/>
+								</LabelField>
+								<InputField name="РезультатыВыполненияУпражненийУпражнение" id="39">
+									<DataPath>Объект.РезультатыВыполненияУпражнений.Упражнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыВыполненияУпражненийУпражнениеКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="РезультатыВыполненияУпражненийУпражнениеРасширеннаяПодсказка" id="41"/>
+								</InputField>
+								<ColumnGroup name="РезультатыВыполненияУпражненийГруппа1" id="104">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1-й подход</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="РезультатыВыполненияУпражненийГруппа1РасширеннаяПодсказка" id="105"/>
+									<ChildItems>
+										<ColumnGroup name="РезультатыВыполненияУпражненийГруппа2" id="106">
+											<ExtendedTooltip name="РезультатыВыполненияУпражненийГруппа2РасширеннаяПодсказка" id="107"/>
+											<ChildItems>
+												<InputField name="РезультатыВыполненияУпражненийКоличество" id="45">
+													<DataPath>Объект.РезультатыВыполненияУпражнений.КоличествоПовторений1</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Повторений</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="РезультатыВыполненияУпражненийКоличествоКонтекстноеМеню" id="46"/>
+													<ExtendedTooltip name="РезультатыВыполненияУпражненийКоличествоРасширеннаяПодсказка" id="47"/>
+												</InputField>
+												<InputField name="РезультатыВыполненияУпражненийНагрузка" id="48">
+													<DataPath>Объект.РезультатыВыполненияУпражнений.Вес1</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вес</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="РезультатыВыполненияУпражненийНагрузкаКонтекстноеМеню" id="49"/>
+													<ExtendedTooltip name="РезультатыВыполненияУпражненийНагрузкаРасширеннаяПодсказка" id="50"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="РезультатыВыполненияУпражненийГруппа3" id="108">
+											<ExtendedTooltip name="РезультатыВыполненияУпражненийГруппа3РасширеннаяПодсказка" id="109"/>
+											<ChildItems>
+												<InputField name="РезультатыВыполненияУпражненийВремяВыполнения" id="98">
+													<DataPath>Объект.РезультатыВыполненияУпражнений.ВремяВыполнения1</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Время выполнения</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="РезультатыВыполненияУпражненийВремяВыполненияКонтекстноеМеню" id="99"/>
+													<ExtendedTooltip name="РезультатыВыполненияУпражненийВремяВыполненияРасширеннаяПодсказка" id="100"/>
+												</InputField>
+												<InputField name="РезультатыВыполненияУпражненийВремяОтдыха" id="101">
+													<DataPath>Объект.РезультатыВыполненияУпражнений.ВремяВосстановления1</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Время отдыха</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="РезультатыВыполненияУпражненийВремяОтдыхаКонтекстноеМеню" id="102"/>
+													<ExtendedTooltip name="РезультатыВыполненияУпражненийВремяОтдыхаРасширеннаяПодсказка" id="103"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="РезультатыВыполненияУпражненийГруппа4" id="110">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>2-й подход</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="РезультатыВыполненияУпражненийГруппа4РасширеннаяПодсказка" id="111"/>
+									<ChildItems>
+										<ColumnGroup name="РезультатыВыполненияУпражненийГруппа5" id="115">
+											<ExtendedTooltip name="РезультатыВыполненияУпражненийГруппа5РасширеннаяПодсказка" id="116"/>
+											<ChildItems>
+												<InputField name="РезультатыВыполненияУпражненийКоличество2" id="112">
+													<DataPath>Объект.РезультатыВыполненияУпражнений.КоличествоПовторений2</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Повторений</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="РезультатыВыполненияУпражненийКоличество2КонтекстноеМеню" id="113"/>
+													<ExtendedTooltip name="РезультатыВыполненияУпражненийКоличество2РасширеннаяПодсказка" id="114"/>
+												</InputField>
+												<InputField name="РезультатыВыполненияУпражненийВес2" id="119">
+													<DataPath>Объект.РезультатыВыполненияУпражнений.Вес2</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Вес</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="РезультатыВыполненияУпражненийВес2КонтекстноеМеню" id="120"/>
+													<ExtendedTooltip name="РезультатыВыполненияУпражненийВес2РасширеннаяПодсказка" id="121"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="РезультатыВыполненияУпражненийГруппа6" id="117">
+											<ExtendedTooltip name="РезультатыВыполненияУпражненийГруппа6РасширеннаяПодсказка" id="118"/>
+											<ChildItems>
+												<InputField name="РезультатыВыполненияУпражненийВремяВыполнения2" id="122">
+													<DataPath>Объект.РезультатыВыполненияУпражнений.ВремяВыполнения2</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Время выполнения</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="РезультатыВыполненияУпражненийВремяВыполнения2КонтекстноеМеню" id="123"/>
+													<ExtendedTooltip name="РезультатыВыполненияУпражненийВремяВыполнения2РасширеннаяПодсказка" id="124"/>
+												</InputField>
+												<InputField name="РезультатыВыполненияУпражненийВремяОтдыха2" id="125">
+													<DataPath>Объект.РезультатыВыполненияУпражнений.ВремяВосстановления2</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Время отдыха</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="РезультатыВыполненияУпражненийВремяОтдыха2КонтекстноеМеню" id="126"/>
+													<ExtendedTooltip name="РезультатыВыполненияУпражненийВремяОтдыха2РасширеннаяПодсказка" id="127"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="РезультатыВыполненияУпражненийПримечание" id="131">
+									<DataPath>Объект.РезультатыВыполненияУпражнений.Примечание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатыВыполненияУпражненийПримечаниеКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="РезультатыВыполненияУпражненийПримечаниеРасширеннаяПодсказка" id="133"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИнвентарь" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инвентарь</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаИнвентарьРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<Table name="Инвентарь" id="56">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Инвентарь</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИнвентарьКонтекстноеМеню" id="57"/>
+							<AutoCommandBar name="ИнвентарьКоманднаяПанель" id="58"/>
+							<ExtendedTooltip name="ИнвентарьРасширеннаяПодсказка" id="59"/>
+							<SearchStringAddition name="ИнвентарьСтрокаПоиска" id="60">
+								<Source>
+									<lf:elementId>56</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ИнвентарьСтрокаПоискаКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="ИнвентарьСтрокаПоискаРасширеннаяПодсказка" id="62"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИнвентарьСостояниеПросмотра" id="63">
+								<Source>
+									<lf:elementId>56</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ИнвентарьСостояниеПросмотраКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="ИнвентарьСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИнвентарьУправлениеПоиском" id="66">
+								<Source>
+									<lf:elementId>56</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ИнвентарьУправлениеПоискомКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ИнвентарьУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ИнвентарьНомерСтроки" id="69">
+									<DataPath>Объект.Инвентарь.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнвентарьНомерСтрокиКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ИнвентарьНомерСтрокиРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+								<InputField name="ИнвентарьСпортИнвентарь" id="72">
+									<DataPath>Объект.Инвентарь.СпортИнвентарь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнвентарьСпортИнвентарьКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ИнвентарьСпортИнвентарьРасширеннаяПодсказка" id="74"/>
+								</InputField>
+								<InputField name="ИнвентарьКоличество" id="75">
+									<DataPath>Объект.Инвентарь.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнвентарьКоличествоКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ИнвентарьКоличествоРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<InputField name="ИнвентарьЕдИзм" id="78">
+									<DataPath>Объект.Инвентарь.ЕдИзм</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнвентарьЕдИзмКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="ИнвентарьЕдИзмРасширеннаяПодсказка" id="80"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОписание" id="81">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница описание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОписаниеРасширеннаяПодсказка" id="82"/>
+					<ChildItems>
+						<InputField name="Описание" id="16">
+							<DataPath>Объект.Описание</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="18"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаПодвал" id="83">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="84"/>
+			<ChildItems>
+				<InputField name="Тренер" id="13">
+					<DataPath>Объект.Тренер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТренерКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ТренерРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<LabelField name="Автор" id="7">
+					<DataPath>Объект.Автор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АвторКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Тренировка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ПродолжительностьТренировок.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>InformationRegister.Рекорды.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

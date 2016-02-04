@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.0">
+	<Item id="7e601d90-fe01-4571-9143-bbe7e1315b20">
+		<Name>Белки</Name>
+		<Code>000000002</Code>
+		<Description>Белки</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8bbaf995-2e14-4496-9b10-d7acc590db99">
+		<Name>Вода</Name>
+		<Code>000000001</Code>
+		<Description>Вода</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2adfce5a-7dc6-42ec-a14b-065535f7b900">
+		<Name>ЖирныеКислоты</Name>
+		<Code>000000004</Code>
+		<Description>Жирные кислоты</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="04fd7ceb-0f44-4f15-9880-1e5a01a24f36">
+		<Name>Жиры</Name>
+		<Code>000000003</Code>
+		<Description>Жиры</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2e553f22-4772-4f86-be9b-1134f7a94eb1">
+		<Name>Крахмал</Name>
+		<Code>000000006</Code>
+		<Description>Крахмал</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="84ef2a86-36ed-4b83-b143-6df7e943bb1b">
+		<Name>Углеводы</Name>
+		<Code>000000005</Code>
+		<Description>Углеводы</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="0a6477c7-428f-46f8-8971-c1b5e5378f2a">
+		<Name>Холестерин</Name>
+		<Code>000000007</Code>
+		<Description>Холестерин</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

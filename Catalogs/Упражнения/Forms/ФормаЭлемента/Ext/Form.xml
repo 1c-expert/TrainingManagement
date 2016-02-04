@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ID</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<Page name="Основное" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОсновноеРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="148">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="149"/>
+							<ChildItems>
+								<UsualGroup name="Группа2" id="150">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="151"/>
+									<ChildItems>
+										<InputField name="ВидСпорта" id="80">
+											<DataPath>Объект.ВидСпорта</DataPath>
+											<ContextMenu name="ВидСпортаКонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="ВидСпортаРасширеннаяПодсказка" id="82"/>
+											<Events>
+												<Event name="OnChange">ВидСпортаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ВидУпражнений" id="16">
+											<DataPath>Объект.ВидУпражнений</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ВидСпорта</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ВидУпражненийКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="ВидУпражненийРасширеннаяПодсказка" id="18"/>
+											<Events>
+												<Event name="OnChange">ВидУпражненийПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="Стиль" id="19">
+											<DataPath>Объект.Стиль</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ВидУпражнений</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="СтильКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="СтильРасширеннаяПодсказка" id="21"/>
+											<Events>
+												<Event name="OnChange">СтильПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="Дисциплина" id="22">
+											<DataPath>Объект.Дисциплина</DataPath>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.Владелец</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Объект.ВидУпражнений</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="ДисциплинаКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="ДисциплинаРасширеннаяПодсказка" id="24"/>
+											<Events>
+												<Event name="OnChange">ДисциплинаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТипНагрузки" id="104">
+											<DataPath>Объект.ТипНагрузки</DataPath>
+											<ContextMenu name="ТипНагрузкиКонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="ТипНагрузкиРасширеннаяПодсказка" id="106"/>
+										</InputField>
+										<InputField name="УровеньСложности" id="107">
+											<DataPath>Объект.УровеньСложности</DataPath>
+											<ContextMenu name="УровеньСложностиКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="УровеньСложностиРасширеннаяПодсказка" id="109"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа3" id="152">
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="153"/>
+									<ChildItems>
+										<PictureField name="СсылкаНаКартинку" id="139">
+											<DataPath>СсылкаНаКартинку</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Height>10</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<MaxHeight>10</MaxHeight>
+											<VerticalStretch>false</VerticalStretch>
+											<ContextMenu name="СсылкаНаКартинкуКонтекстноеМеню" id="140"/>
+											<ExtendedTooltip name="СсылкаНаКартинкуРасширеннаяПодсказка" id="141"/>
+										</PictureField>
+										<CommandBar name="КоманднаяПанельИзображения" id="142">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Командная панель изображения</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Командная панель изображения</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalLocation>Center</HorizontalLocation>
+											<ExtendedTooltip name="КоманднаяПанельИзображенияРасширеннаяПодсказка" id="143"/>
+											<ChildItems>
+												<Button name="ОчиститьКартинку" id="146">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ОчиститьКартинку</CommandName>
+													<Parameter xsi:nil="true"/>
+													<Picture>
+														<xr:Ref>StdPicture.Clear</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="ОчиститьКартинкуРасширеннаяПодсказка" id="147"/>
+												</Button>
+												<Button name="ВыбратьФайлКартинки" id="144">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ВыбратьФайлКартинки</CommandName>
+													<Parameter xsi:nil="true"/>
+													<Picture>
+														<xr:Ref>StdPicture.OpenFile</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="ВыбратьФайлКартинкиРасширеннаяПодсказка" id="145"/>
+												</Button>
+												<Button name="СохранитьИхображениеНаДиск" id="154">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.СохранитьИхображениеНаДиск</CommandName>
+													<Parameter xsi:nil="true"/>
+													<Picture>
+														<xr:Ref>StdPicture.Write</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="СохранитьИхображениеНаДискРасширеннаяПодсказка" id="155"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОтслеживаемыеПоказатели" id="83">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отслеживаемые показатели</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница отслеживаемые показатели</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОтслеживаемыеПоказателиРасширеннаяПодсказка" id="84"/>
+					<ChildItems>
+						<Table name="ОтслеживаемыеПоказатели" id="85">
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>5</MaxHeight>
+							<HeightInTableRows>9</HeightInTableRows>
+							<VerticalStretch>false</VerticalStretch>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ОтслеживаемыеПоказатели</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОтслеживаемыеПоказателиКонтекстноеМеню" id="86"/>
+							<AutoCommandBar name="ОтслеживаемыеПоказателиКоманднаяПанель" id="87"/>
+							<ExtendedTooltip name="ОтслеживаемыеПоказателиРасширеннаяПодсказка" id="88"/>
+							<SearchStringAddition name="ОтслеживаемыеПоказателиСтрокаПоиска" id="89">
+								<Source>
+									<lf:elementId>85</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ОтслеживаемыеПоказателиСтрокаПоискаКонтекстноеМеню" id="90"/>
+								<ExtendedTooltip name="ОтслеживаемыеПоказателиСтрокаПоискаРасширеннаяПодсказка" id="91"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОтслеживаемыеПоказателиСостояниеПросмотра" id="92">
+								<Source>
+									<lf:elementId>85</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ОтслеживаемыеПоказателиСостояниеПросмотраКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="ОтслеживаемыеПоказателиСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОтслеживаемыеПоказателиУправлениеПоиском" id="95">
+								<Source>
+									<lf:elementId>85</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ОтслеживаемыеПоказателиУправлениеПоискомКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="ОтслеживаемыеПоказателиУправлениеПоискомРасширеннаяПодсказка" id="97"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОтслеживаемыеПоказателиНомерСтроки" id="98">
+									<DataPath>Объект.ОтслеживаемыеПоказатели.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтслеживаемыеПоказателиНомерСтрокиКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="ОтслеживаемыеПоказателиНомерСтрокиРасширеннаяПодсказка" id="100"/>
+								</LabelField>
+								<InputField name="ОтслеживаемыеПоказателиПоказатель" id="101">
+									<DataPath>Объект.ОтслеживаемыеПоказатели.Показатель</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтслеживаемыеПоказателиПоказательКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="ОтслеживаемыеПоказателиПоказательРасширеннаяПодсказка" id="103"/>
+								</InputField>
+								<InputField name="ОтслеживаемыеПоказателиЛучшееЗначение" id="156">
+									<DataPath>Объект.ОтслеживаемыеПоказатели.ЛучшееЗначение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтслеживаемыеПоказателиЛучшееЗначениеКонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="ОтслеживаемыеПоказателиЛучшееЗначениеРасширеннаяПодсказка" id="158"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаИнвентарь" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инвентарь</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница инвентарь</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаИнвентарьРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<Table name="Инвентарь" id="33">
+							<Width>6</Width>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>6</MaxHeight>
+							<HeightInTableRows>6</HeightInTableRows>
+							<VerticalStretch>false</VerticalStretch>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Инвентарь</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИнвентарьКонтекстноеМеню" id="34"/>
+							<AutoCommandBar name="ИнвентарьКоманднаяПанель" id="35"/>
+							<ExtendedTooltip name="ИнвентарьРасширеннаяПодсказка" id="36"/>
+							<SearchStringAddition name="ИнвентарьСтрокаПоиска" id="37">
+								<Source>
+									<lf:elementId>33</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ИнвентарьСтрокаПоискаКонтекстноеМеню" id="38"/>
+								<ExtendedTooltip name="ИнвентарьСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИнвентарьСостояниеПросмотра" id="40">
+								<Source>
+									<lf:elementId>33</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ИнвентарьСостояниеПросмотраКонтекстноеМеню" id="41"/>
+								<ExtendedTooltip name="ИнвентарьСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИнвентарьУправлениеПоиском" id="43">
+								<Source>
+									<lf:elementId>33</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ИнвентарьУправлениеПоискомКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="ИнвентарьУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ИнвентарьНомерСтроки" id="46">
+									<DataPath>Объект.Инвентарь.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнвентарьНомерСтрокиКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ИнвентарьНомерСтрокиРасширеннаяПодсказка" id="48"/>
+								</LabelField>
+								<InputField name="ИнвентарьСпортИнвентарь" id="49">
+									<DataPath>Объект.Инвентарь.СпортИнвентарь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнвентарьСпортИнвентарьКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="ИнвентарьСпортИнвентарьРасширеннаяПодсказка" id="51"/>
+								</InputField>
+								<InputField name="ИнвентарьКоличество" id="52">
+									<DataPath>Объект.Инвентарь.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнвентарьКоличествоКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ИнвентарьКоличествоРасширеннаяПодсказка" id="54"/>
+								</InputField>
+								<InputField name="ИнвентарьЕдиницаИзмерения" id="55">
+									<DataPath>Объект.Инвентарь.ЕдиницаИзмерения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнвентарьЕдиницаИзмеренияКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ИнвентарьЕдиницаИзмеренияРасширеннаяПодсказка" id="57"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаВоздействиеНаМышцы" id="110">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Воздействие на мышцы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница воздействие на мышцы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаВоздействиеНаМышцыРасширеннаяПодсказка" id="111"/>
+					<ChildItems>
+						<Table name="ВоздействиеНаМыщцы" id="112">
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<MaxHeight>6</MaxHeight>
+							<HeightInTableRows>6</HeightInTableRows>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<VerticalStretch>false</VerticalStretch>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ВоздействиеНаМыщцы</DataPath>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ВоздействиеНаМыщцыКонтекстноеМеню" id="113"/>
+							<AutoCommandBar name="ВоздействиеНаМыщцыКоманднаяПанель" id="114">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ВоздействиеНаМыщцыВоздействиеНаМышцыСоздать" id="137">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ВоздействиеНаМышцыСоздать</CommandName>
+										<Parameter xsi:nil="true"/>
+										<Picture>
+											<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Создать</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ВоздействиеНаМыщцыВоздействиеНаМышцыСоздатьРасширеннаяПодсказка" id="138"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВоздействиеНаМыщцыРасширеннаяПодсказка" id="115"/>
+							<SearchStringAddition name="ВоздействиеНаМыщцыСтрокаПоиска" id="116">
+								<Source>
+									<lf:elementId>112</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ВоздействиеНаМыщцыСтрокаПоискаКонтекстноеМеню" id="117"/>
+								<ExtendedTooltip name="ВоздействиеНаМыщцыСтрокаПоискаРасширеннаяПодсказка" id="118"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВоздействиеНаМыщцыСостояниеПросмотра" id="119">
+								<Source>
+									<lf:elementId>112</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ВоздействиеНаМыщцыСостояниеПросмотраКонтекстноеМеню" id="120"/>
+								<ExtendedTooltip name="ВоздействиеНаМыщцыСостояниеПросмотраРасширеннаяПодсказка" id="121"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВоздействиеНаМыщцыУправлениеПоиском" id="122">
+								<Source>
+									<lf:elementId>112</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ВоздействиеНаМыщцыУправлениеПоискомКонтекстноеМеню" id="123"/>
+								<ExtendedTooltip name="ВоздействиеНаМыщцыУправлениеПоискомРасширеннаяПодсказка" id="124"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ВоздействиеНаМыщцыСтепеньВоздействия" id="131">
+									<DataPath>ВоздействиеНаМыщцы.СтепеньВоздействия</DataPath>
+									<ContextMenu name="ВоздействиеНаМыщцыСтепеньВоздействияКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="ВоздействиеНаМыщцыСтепеньВоздействияРасширеннаяПодсказка" id="133"/>
+								</LabelField>
+								<LabelField name="ВоздействиеНаМыщцыМышцы" id="128">
+									<DataPath>ВоздействиеНаМыщцы.Мышцы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Мышца</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВоздействиеНаМыщцыМышцыКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="ВоздействиеНаМыщцыМышцыРасширеннаяПодсказка" id="130"/>
+								</LabelField>
+								<LabelField name="ВоздействиеНаМыщцыМышечнаяГруппа" id="134">
+									<DataPath>ВоздействиеНаМыщцы.МышечнаяГруппа</DataPath>
+									<ContextMenu name="ВоздействиеНаМыщцыМышечнаяГруппаКонтекстноеМеню" id="135"/>
+									<ExtendedTooltip name="ВоздействиеНаМыщцыМышечнаяГруппаРасширеннаяПодсказка" id="136"/>
+								</LabelField>
+								<LabelField name="ВоздействиеНаМыщцыТипВоздействия" id="165">
+									<DataPath>ВоздействиеНаМыщцы.ТипВоздействия</DataPath>
+									<ContextMenu name="ВоздействиеНаМыщцыТипВоздействияКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="ВоздействиеНаМыщцыТипВоздействияРасширеннаяПодсказка" id="167"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОписание" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница описание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОписаниеРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<InputField name="Описание" id="13">
+							<DataPath>Объект.Описание</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Height>3</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<VerticalStretch>false</VerticalStretch>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="ТехникаВыполнения" id="159">
+							<DataPath>Объект.ТехникаВыполнения</DataPath>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ТехникаВыполненияКонтекстноеМеню" id="160"/>
+							<ExtendedTooltip name="ТехникаВыполненияРасширеннаяПодсказка" id="161"/>
+						</InputField>
+						<InputField name="Рекомендации" id="162">
+							<DataPath>Объект.Рекомендации</DataPath>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="РекомендацииКонтекстноеМеню" id="163"/>
+							<ExtendedTooltip name="РекомендацииРасширеннаяПодсказка" id="164"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Упражнения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВоздействиеНаМыщцы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Воздействие на мыщцы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	РегистрСведенийМышцыЗадействованныеВУпражнениях.СтепеньВоздействия,
+	РегистрСведенийМышцыЗадействованныеВУпражнениях.Мышцы,
+	РегистрСведенийМышцыЗадействованныеВУпражнениях.Мышцы.Владелец КАК МышечнаяГруппа,
+	РегистрСведенийМышцыЗадействованныеВУпражнениях.Упражнение,
+	РегистрСведенийМышцыЗадействованныеВУпражнениях.ТипВоздействия
+ИЗ
+	РегистрСведений.МышцыЗадействованныеВУпражнениях КАК РегистрСведенийМышцыЗадействованныеВУпражнениях</QueryText>
+				<MainTable>InformationRegister.МышцыЗадействованныеВУпражнениях</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>СтепеньВоздействия</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтепеньВоздействия</dcsset:left>
+									<dcsset:comparisonType>Greater</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:decimal">6</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>СтепеньВоздействия</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemGroup">
+									<dcsset:groupType>AndGroup</dcsset:groupType>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">СтепеньВоздействия</dcsset:left>
+										<dcsset:comparisonType>Greater</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">3</dcsset:right>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:FilterItemComparison">
+										<dcsset:left xsi:type="dcscor:Field">СтепеньВоздействия</dcsset:left>
+										<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+										<dcsset:right xsi:type="xs:decimal">6</dcsset:right>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:Orange</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>СтепеньВоздействия</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">СтепеньВоздействия</dcsset:left>
+									<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:decimal">3</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:PaleGreen</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СсылкаНаКартинку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на картинку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВоздействиеНаМышцыСоздать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Воздействие на мышцы создать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Воздействие на мышцы создать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВоздействиеНаМышцыСоздать</Action>
+		</Command>
+		<Command name="ВыбратьФайлКартинки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать файл картинки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать файл картинки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьФайлКартинки</Action>
+		</Command>
+		<Command name="ОчиститьКартинку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить картинку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить картинку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьКартинку</Action>
+		</Command>
+		<Command name="СохранитьИхображениеНаДиск" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить ихображение на диск</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить ихображение на диск</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+	</Commands>
+</Form>

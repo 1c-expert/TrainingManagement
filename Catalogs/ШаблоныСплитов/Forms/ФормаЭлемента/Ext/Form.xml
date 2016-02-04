@@ -1,0 +1,908 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Шапка" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="67"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ID</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="КоличествоТренировочныхДней" id="7">
+			<DataPath>Объект.КоличествоТренировочныхДней</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>7</Width>
+			<ChoiceButton>false</ChoiceButton>
+			<SpinButton>true</SpinButton>
+			<Font bold="true" kind="AutoFont"/>
+			<ContextMenu name="КоличествоТренировочныхДнейКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КоличествоТренировочныхДнейРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">КоличествоТренировочныхДнейПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Pages name="Страницы" id="414">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="415"/>
+			<ChildItems>
+				<Page name="Тренировка1" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Тренировка1РасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<UsualGroup name="ГруппыМышц1" id="70">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппыМышц1РасширеннаяПодсказка" id="71"/>
+						</UsualGroup>
+						<Button name="ДобавитьГруппуМышц" id="416">
+							<Type>Hyperlink</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.ДобавитьГруппуМышц</CommandName>
+							<Parameter xsi:nil="true"/>
+							<Picture>
+								<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Добавить</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ДобавитьГруппуМышцРасширеннаяПодсказка" id="417"/>
+						</Button>
+						<Table name="Упражнения1" id="38">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Упражнения</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Упражнения1КонтекстноеМеню" id="39"/>
+							<AutoCommandBar name="Упражнения1КоманднаяПанель" id="40"/>
+							<ExtendedTooltip name="Упражнения1РасширеннаяПодсказка" id="41"/>
+							<SearchStringAddition name="Упражнения1СтрокаПоиска" id="42">
+								<Source>
+									<lf:elementId>38</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения1СтрокаПоискаКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="Упражнения1СтрокаПоискаРасширеннаяПодсказка" id="44"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Упражнения1СостояниеПросмотра" id="45">
+								<Source>
+									<lf:elementId>38</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения1СостояниеПросмотраКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="Упражнения1СостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Упражнения1УправлениеПоиском" id="48">
+								<Source>
+									<lf:elementId>38</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения1УправлениеПоискомКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="Упражнения1УправлениеПоискомРасширеннаяПодсказка" id="50"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УпражненияНомерСтроки" id="51">
+									<DataPath>Объект.Упражнения.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияНомерСтрокиКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="УпражненияНомерСтрокиРасширеннаяПодсказка" id="53"/>
+								</LabelField>
+								<InputField name="УпражненияУпражнение" id="57">
+									<DataPath>Объект.Упражнения.Упражнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияУпражнениеКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="УпражненияУпражнениеРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПодходов" id="60">
+									<DataPath>Объект.Упражнения.КоличествоПодходов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подходов</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПодходовКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="УпражненияКоличествоПодходовРасширеннаяПодсказка" id="62"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПовторений" id="63">
+									<DataPath>Объект.Упражнения.КоличествоПовторений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторений</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПовторенийКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="УпражненияКоличествоПовторенийРасширеннаяПодсказка" id="65"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Тренировка2" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="Тренировка2РасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<UsualGroup name="ГруппыМышц2" id="74">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппыМышц2РасширеннаяПодсказка" id="75"/>
+						</UsualGroup>
+						<Table name="Упражнения2" id="264">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Упражнения</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Упражнения2КонтекстноеМеню" id="265"/>
+							<AutoCommandBar name="Упражнения2КоманднаяПанель" id="266"/>
+							<ExtendedTooltip name="Упражнения2РасширеннаяПодсказка" id="267"/>
+							<SearchStringAddition name="Упражнения2СтрокаПоиска" id="268">
+								<Source>
+									<lf:elementId>264</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения2СтрокаПоискаКонтекстноеМеню" id="269"/>
+								<ExtendedTooltip name="Упражнения2СтрокаПоискаРасширеннаяПодсказка" id="270"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Упражнения2СостояниеПросмотра" id="271">
+								<Source>
+									<lf:elementId>264</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения2СостояниеПросмотраКонтекстноеМеню" id="272"/>
+								<ExtendedTooltip name="Упражнения2СостояниеПросмотраРасширеннаяПодсказка" id="273"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Упражнения2УправлениеПоиском" id="274">
+								<Source>
+									<lf:elementId>264</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения2УправлениеПоискомКонтекстноеМеню" id="275"/>
+								<ExtendedTooltip name="Упражнения2УправлениеПоискомРасширеннаяПодсказка" id="276"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УпражненияНомерСтроки1" id="277">
+									<DataPath>Объект.Упражнения.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияНомерСтроки1КонтекстноеМеню" id="278"/>
+									<ExtendedTooltip name="УпражненияНомерСтроки1РасширеннаяПодсказка" id="279"/>
+								</LabelField>
+								<InputField name="УпражненияУпражнение1" id="280">
+									<DataPath>Объект.Упражнения.Упражнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияУпражнение1КонтекстноеМеню" id="281"/>
+									<ExtendedTooltip name="УпражненияУпражнение1РасширеннаяПодсказка" id="282"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПодходов1" id="283">
+									<DataPath>Объект.Упражнения.КоличествоПодходов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подходов</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПодходов1КонтекстноеМеню" id="284"/>
+									<ExtendedTooltip name="УпражненияКоличествоПодходов1РасширеннаяПодсказка" id="285"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПовторений1" id="286">
+									<DataPath>Объект.Упражнения.КоличествоПовторений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторений</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПовторений1КонтекстноеМеню" id="287"/>
+									<ExtendedTooltip name="УпражненияКоличествоПовторений1РасширеннаяПодсказка" id="288"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Тренировка3" id="104">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка3</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="Тренировка3РасширеннаяПодсказка" id="105"/>
+					<ChildItems>
+						<UsualGroup name="ГруппыМышц3" id="106">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппыМышц3РасширеннаяПодсказка" id="107"/>
+						</UsualGroup>
+						<Table name="Упражнения3" id="289">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Упражнения</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Упражнения3КонтекстноеМеню" id="290"/>
+							<AutoCommandBar name="Упражнения3КоманднаяПанель" id="291"/>
+							<ExtendedTooltip name="Упражнения3РасширеннаяПодсказка" id="292"/>
+							<SearchStringAddition name="Упражнения3СтрокаПоиска" id="293">
+								<Source>
+									<lf:elementId>289</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения3СтрокаПоискаКонтекстноеМеню" id="294"/>
+								<ExtendedTooltip name="Упражнения3СтрокаПоискаРасширеннаяПодсказка" id="295"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Упражнения3СостояниеПросмотра" id="296">
+								<Source>
+									<lf:elementId>289</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения3СостояниеПросмотраКонтекстноеМеню" id="297"/>
+								<ExtendedTooltip name="Упражнения3СостояниеПросмотраРасширеннаяПодсказка" id="298"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Упражнения3УправлениеПоиском" id="299">
+								<Source>
+									<lf:elementId>289</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения3УправлениеПоискомКонтекстноеМеню" id="300"/>
+								<ExtendedTooltip name="Упражнения3УправлениеПоискомРасширеннаяПодсказка" id="301"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УпражненияНомерСтроки2" id="302">
+									<DataPath>Объект.Упражнения.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияНомерСтроки2КонтекстноеМеню" id="303"/>
+									<ExtendedTooltip name="УпражненияНомерСтроки2РасширеннаяПодсказка" id="304"/>
+								</LabelField>
+								<InputField name="УпражненияУпражнение2" id="305">
+									<DataPath>Объект.Упражнения.Упражнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияУпражнение2КонтекстноеМеню" id="306"/>
+									<ExtendedTooltip name="УпражненияУпражнение2РасширеннаяПодсказка" id="307"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПодходов2" id="308">
+									<DataPath>Объект.Упражнения.КоличествоПодходов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подходов</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПодходов2КонтекстноеМеню" id="309"/>
+									<ExtendedTooltip name="УпражненияКоличествоПодходов2РасширеннаяПодсказка" id="310"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПовторений2" id="311">
+									<DataPath>Объект.Упражнения.КоличествоПовторений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторений</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПовторений2КонтекстноеМеню" id="312"/>
+									<ExtendedTooltip name="УпражненияКоличествоПовторений2РасширеннаяПодсказка" id="313"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Тренировка4" id="136">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка4</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="Тренировка4РасширеннаяПодсказка" id="137"/>
+					<ChildItems>
+						<UsualGroup name="ГруппыМышц4" id="138">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппыМышц4РасширеннаяПодсказка" id="139"/>
+						</UsualGroup>
+						<Table name="Упражнения4" id="314">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Упражнения</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Упражнения4КонтекстноеМеню" id="315"/>
+							<AutoCommandBar name="Упражнения4КоманднаяПанель" id="316"/>
+							<ExtendedTooltip name="Упражнения4РасширеннаяПодсказка" id="317"/>
+							<SearchStringAddition name="Упражнения4СтрокаПоиска" id="318">
+								<Source>
+									<lf:elementId>314</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения4СтрокаПоискаКонтекстноеМеню" id="319"/>
+								<ExtendedTooltip name="Упражнения4СтрокаПоискаРасширеннаяПодсказка" id="320"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Упражнения4СостояниеПросмотра" id="321">
+								<Source>
+									<lf:elementId>314</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения4СостояниеПросмотраКонтекстноеМеню" id="322"/>
+								<ExtendedTooltip name="Упражнения4СостояниеПросмотраРасширеннаяПодсказка" id="323"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Упражнения4УправлениеПоиском" id="324">
+								<Source>
+									<lf:elementId>314</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения4УправлениеПоискомКонтекстноеМеню" id="325"/>
+								<ExtendedTooltip name="Упражнения4УправлениеПоискомРасширеннаяПодсказка" id="326"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УпражненияНомерСтроки3" id="327">
+									<DataPath>Объект.Упражнения.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияНомерСтроки3КонтекстноеМеню" id="328"/>
+									<ExtendedTooltip name="УпражненияНомерСтроки3РасширеннаяПодсказка" id="329"/>
+								</LabelField>
+								<InputField name="УпражненияУпражнение3" id="330">
+									<DataPath>Объект.Упражнения.Упражнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияУпражнение3КонтекстноеМеню" id="331"/>
+									<ExtendedTooltip name="УпражненияУпражнение3РасширеннаяПодсказка" id="332"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПодходов3" id="333">
+									<DataPath>Объект.Упражнения.КоличествоПодходов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подходов</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПодходов3КонтекстноеМеню" id="334"/>
+									<ExtendedTooltip name="УпражненияКоличествоПодходов3РасширеннаяПодсказка" id="335"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПовторений3" id="336">
+									<DataPath>Объект.Упражнения.КоличествоПовторений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторений</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПовторений3КонтекстноеМеню" id="337"/>
+									<ExtendedTooltip name="УпражненияКоличествоПовторений3РасширеннаяПодсказка" id="338"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Тренировка5" id="168">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка5</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="Тренировка5РасширеннаяПодсказка" id="169"/>
+					<ChildItems>
+						<UsualGroup name="ГруппыМышц5" id="170">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппыМышц5РасширеннаяПодсказка" id="171"/>
+						</UsualGroup>
+						<Table name="Упражнения5" id="339">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Упражнения</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Упражнения5КонтекстноеМеню" id="340"/>
+							<AutoCommandBar name="Упражнения5КоманднаяПанель" id="341"/>
+							<ExtendedTooltip name="Упражнения5РасширеннаяПодсказка" id="342"/>
+							<SearchStringAddition name="Упражнения5СтрокаПоиска" id="343">
+								<Source>
+									<lf:elementId>339</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения5СтрокаПоискаКонтекстноеМеню" id="344"/>
+								<ExtendedTooltip name="Упражнения5СтрокаПоискаРасширеннаяПодсказка" id="345"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Упражнения5СостояниеПросмотра" id="346">
+								<Source>
+									<lf:elementId>339</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения5СостояниеПросмотраКонтекстноеМеню" id="347"/>
+								<ExtendedTooltip name="Упражнения5СостояниеПросмотраРасширеннаяПодсказка" id="348"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Упражнения5УправлениеПоиском" id="349">
+								<Source>
+									<lf:elementId>339</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения5УправлениеПоискомКонтекстноеМеню" id="350"/>
+								<ExtendedTooltip name="Упражнения5УправлениеПоискомРасширеннаяПодсказка" id="351"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УпражненияНомерСтроки4" id="352">
+									<DataPath>Объект.Упражнения.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияНомерСтроки4КонтекстноеМеню" id="353"/>
+									<ExtendedTooltip name="УпражненияНомерСтроки4РасширеннаяПодсказка" id="354"/>
+								</LabelField>
+								<InputField name="УпражненияУпражнение4" id="355">
+									<DataPath>Объект.Упражнения.Упражнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияУпражнение4КонтекстноеМеню" id="356"/>
+									<ExtendedTooltip name="УпражненияУпражнение4РасширеннаяПодсказка" id="357"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПодходов4" id="358">
+									<DataPath>Объект.Упражнения.КоличествоПодходов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подходов</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПодходов4КонтекстноеМеню" id="359"/>
+									<ExtendedTooltip name="УпражненияКоличествоПодходов4РасширеннаяПодсказка" id="360"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПовторений4" id="361">
+									<DataPath>Объект.Упражнения.КоличествоПовторений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторений</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПовторений4КонтекстноеМеню" id="362"/>
+									<ExtendedTooltip name="УпражненияКоличествоПовторений4РасширеннаяПодсказка" id="363"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Тренировка6" id="200">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка6</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="Тренировка6РасширеннаяПодсказка" id="201"/>
+					<ChildItems>
+						<UsualGroup name="ГруппыМышц6" id="202">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппыМышц6РасширеннаяПодсказка" id="203"/>
+						</UsualGroup>
+						<Table name="Упражнения6" id="364">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Упражнения</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Упражнения6КонтекстноеМеню" id="365"/>
+							<AutoCommandBar name="Упражнения6КоманднаяПанель" id="366"/>
+							<ExtendedTooltip name="Упражнения6РасширеннаяПодсказка" id="367"/>
+							<SearchStringAddition name="Упражнения6СтрокаПоиска" id="368">
+								<Source>
+									<lf:elementId>364</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения6СтрокаПоискаКонтекстноеМеню" id="369"/>
+								<ExtendedTooltip name="Упражнения6СтрокаПоискаРасширеннаяПодсказка" id="370"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Упражнения6СостояниеПросмотра" id="371">
+								<Source>
+									<lf:elementId>364</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения6СостояниеПросмотраКонтекстноеМеню" id="372"/>
+								<ExtendedTooltip name="Упражнения6СостояниеПросмотраРасширеннаяПодсказка" id="373"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Упражнения6УправлениеПоиском" id="374">
+								<Source>
+									<lf:elementId>364</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения6УправлениеПоискомКонтекстноеМеню" id="375"/>
+								<ExtendedTooltip name="Упражнения6УправлениеПоискомРасширеннаяПодсказка" id="376"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УпражненияНомерСтроки5" id="377">
+									<DataPath>Объект.Упражнения.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияНомерСтроки5КонтекстноеМеню" id="378"/>
+									<ExtendedTooltip name="УпражненияНомерСтроки5РасширеннаяПодсказка" id="379"/>
+								</LabelField>
+								<InputField name="УпражненияУпражнение5" id="380">
+									<DataPath>Объект.Упражнения.Упражнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияУпражнение5КонтекстноеМеню" id="381"/>
+									<ExtendedTooltip name="УпражненияУпражнение5РасширеннаяПодсказка" id="382"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПодходов5" id="383">
+									<DataPath>Объект.Упражнения.КоличествоПодходов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подходов</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПодходов5КонтекстноеМеню" id="384"/>
+									<ExtendedTooltip name="УпражненияКоличествоПодходов5РасширеннаяПодсказка" id="385"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПовторений5" id="386">
+									<DataPath>Объект.Упражнения.КоличествоПовторений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторений</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПовторений5КонтекстноеМеню" id="387"/>
+									<ExtendedTooltip name="УпражненияКоличествоПовторений5РасширеннаяПодсказка" id="388"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Тренировка7" id="232">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка7</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тренировка1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="Тренировка7РасширеннаяПодсказка" id="233"/>
+					<ChildItems>
+						<UsualGroup name="ГруппыМышц7" id="234">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группы мышц1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппыМышц7РасширеннаяПодсказка" id="235"/>
+						</UsualGroup>
+						<Table name="Упражнения7" id="389">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Упражнения</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="Упражнения7КонтекстноеМеню" id="390"/>
+							<AutoCommandBar name="Упражнения7КоманднаяПанель" id="391"/>
+							<ExtendedTooltip name="Упражнения7РасширеннаяПодсказка" id="392"/>
+							<SearchStringAddition name="Упражнения7СтрокаПоиска" id="393">
+								<Source>
+									<lf:elementId>389</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения7СтрокаПоискаКонтекстноеМеню" id="394"/>
+								<ExtendedTooltip name="Упражнения7СтрокаПоискаРасширеннаяПодсказка" id="395"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="Упражнения7СостояниеПросмотра" id="396">
+								<Source>
+									<lf:elementId>389</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения7СостояниеПросмотраКонтекстноеМеню" id="397"/>
+								<ExtendedTooltip name="Упражнения7СостояниеПросмотраРасширеннаяПодсказка" id="398"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="Упражнения7УправлениеПоиском" id="399">
+								<Source>
+									<lf:elementId>389</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="Упражнения7УправлениеПоискомКонтекстноеМеню" id="400"/>
+								<ExtendedTooltip name="Упражнения7УправлениеПоискомРасширеннаяПодсказка" id="401"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УпражненияНомерСтроки6" id="402">
+									<DataPath>Объект.Упражнения.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияНомерСтроки6КонтекстноеМеню" id="403"/>
+									<ExtendedTooltip name="УпражненияНомерСтроки6РасширеннаяПодсказка" id="404"/>
+								</LabelField>
+								<InputField name="УпражненияУпражнение6" id="405">
+									<DataPath>Объект.Упражнения.Упражнение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияУпражнение6КонтекстноеМеню" id="406"/>
+									<ExtendedTooltip name="УпражненияУпражнение6РасширеннаяПодсказка" id="407"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПодходов6" id="408">
+									<DataPath>Объект.Упражнения.КоличествоПодходов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подходов</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПодходов6КонтекстноеМеню" id="409"/>
+									<ExtendedTooltip name="УпражненияКоличествоПодходов6РасширеннаяПодсказка" id="410"/>
+								</InputField>
+								<InputField name="УпражненияКоличествоПовторений6" id="411">
+									<DataPath>Объект.Упражнения.КоличествоПовторений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Повторений</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УпражненияКоличествоПовторений6КонтекстноеМеню" id="412"/>
+									<ExtendedTooltip name="УпражненияКоличествоПовторений6РасширеннаяПодсказка" id="413"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ШаблоныСплитов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УдалитьГруппуМышц" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить группу мышц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить группу мышц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьГруппуМышц</Action>
+		</Command>
+		<Command name="ИзменитьГруппуМышц" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить группу мышц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить группу мышц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьГруппуМышц</Action>
+		</Command>
+		<Command name="ДобавитьГруппуМышц" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу мышц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу мышц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьГруппуМышц</Action>
+		</Command>
+	</Commands>
+</Form>
